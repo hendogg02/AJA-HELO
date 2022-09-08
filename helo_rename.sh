@@ -33,14 +33,19 @@ cmpsIP="10.0.0.1"
 # Add one minute to the record time to give buffer for seconds past.
 BeforeGeneralName="25500"
 GeneralName="30100"
+
 BeforeFirstService="84500"
 FirstService="90100"
+
 BeforeSecondService="104500"
 SecondService="110100"
+
 BeforeThirdService="124500"
 ThirdService="130100"
+
 BeforeMiddleSchool="154500"
 MiddleSchool="160100"
+
 BeforeHighSchool="184500"
 HighSchool="190100"
 
