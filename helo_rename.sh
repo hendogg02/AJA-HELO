@@ -27,6 +27,8 @@ BeforeHighSchool="184500"
 HighSchool="190100"
 HighSchoolName="High School"
 
+#--------------------------------------------
+
 # Current Day calculator
 Date=$(date +"%m-%d-%Y")
 Day=$(date +"%a")
