@@ -5,7 +5,8 @@
 cmpsInit="ZZ"
 heloIP="10.0.0.1"
 
-# To change the time hhmmss are all ran together. This is military time. If it is 8 o'clock do not write 08 but rather just 8. 
+# To change the time, hhmmss are all ran together. This is military time. 
+# If it is 8 o'clock do not write 08 but rather just 8. 
 # Add one minute to the record time to give buffer for seconds past.
 BeforeGeneralName="25500"
 GeneralName="30100"
