@@ -1,10 +1,10 @@
 #!/bin/bash
 
+source cmps_Helo.sh
+
 # Put in quotes campus initials that matches with the folder in Synology
 
-cmps="ZZ"
-
-for f in /volume1/Review/$cmps/preHELO/*; do
+for f in /volume1/Review/$cmpsInit/preHELO/*; do
 
     if [[ "$f" == *"_001"* ]]
         then

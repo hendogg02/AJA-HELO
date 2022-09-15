@@ -1,9 +1,6 @@
 #!/bin/bash
 
-# Custom variables
-# Campus naming and IP
-cmpsInit="ZZ"
-heloIP="10.0.0.1"
+source cmps_Helo.sh
 
 # To change the time, hhmmss are all ran together. This is military time. 
 # If it is 8 o'clock do not write 08 but rather just 8. 

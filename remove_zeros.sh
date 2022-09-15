@@ -1,9 +1,11 @@
 #!/bin/bash
 
-## Looking at a filename of XX 08-14-2022 9AM Sun - (Sun Review)_001_000001.mp4 and removing the zeros.
+source cmps_Helo.sh
+
+## Looking at a filename of ZZ 08-14-2022 9AM Sun - (Sun Review)_001_000001.mp4 and removing the zeros.
 # ${f: -4} is grabbing the last 4 characters of a string.
 
-for f in /volume1/Review/XX/HELO/*; do
+for f in /volume1/Review/$cmpsInit/HELO/*; do
 
     if [[ "$f" == *"_001"* ]]
         then
