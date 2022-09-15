@@ -26,7 +26,7 @@ if [[ $FirstTimeCharacter -eq "0" ]]
 fi
 
 # Campus naming and IP
-cmpsInitials="ZZ"
+cmpsInit="ZZ"
 cmpsIP="10.0.0.1"
 
 # To change the time hhmmss are all ran together. This is military time. If it is 8 o'clock do not write 08 but rather just 8. 
@@ -51,7 +51,9 @@ HighSchool="190100"
 
 if [[ $Day == "Sun" ]]
     then 
-        if [[ $BeforeFirstService -gt $FullTime ]] && [[ $FullTime -le $FirstService ]];
+        if [[ $BeforeFirstService -gt $FullTime ]]
+            then echo "Before 9am"
+            elif [[ $FullTime -le $FirstService ]]
             then 
                 Time="9"
                 Extension=%20"-"%20"(Service"%20"Review)"
@@ -60,7 +62,9 @@ fi
 
 if [[ $Day == "Sun" ]]
     then
-         if [[ $BeforeSecondService -gt $FullTime ]] && [[ $FullTime -le $SecondService ]];
+         if [[ $BeforeSecondService -gt $FullTime ]]
+            then echo "Before 11am"
+            elif [[ $FullTime -le $SecondService ]]
             then
                 Time="11"
                 Extension=%20"-"%20"(Service"%20"Review)"
@@ -69,7 +73,9 @@ fi
 
 if [[ $Day == "Sun" ]]
     then
-         if [[ $BeforeThirdService -gt $FullTime ]] && [[ $FullTime -le $ThirdService ]];
+         if [[ $BeforeThirdService -gt $FullTime ]]
+            then echo "Before 1pm"
+            elif [[ $FullTime -le $ThirdService ]]
             then
                 Time="1"
                 Extension=%20"-"%20"(Service"%20"Review)"
@@ -78,7 +84,9 @@ fi
 
 if [[ $Day == "Sun" ]]
     then
-         if [[ $BeforeMiddleSchool -gt $FullTime ]] && [[ $FullTime -le $MiddleSchool ]];
+         if [[ $BeforeMiddleSchool -gt $FullTime ]]
+            then echo "Before 4pm"
+            elif [[ $FullTime -le $MiddleSchool ]]
             then
                 Time="4"
                 Extension=%20"-"%20"(MiddleSchool)"
@@ -87,18 +95,22 @@ fi
 
 if [[ $Day == "Wed" ]]
     then
-         if [[ $BeforeHighSchool -gt $FullTime ]] && [[ $FullTime -le $HighSchool ]];
+         if [[ $BeforeHighSchool -gt $FullTime ]]
+            then echo "Before 7pm"
+            elif [[ $FullTime -le $HighSchool ]]
             then
                 Time="7"
                 Extension=%20"-"%20"(HighSchool)"
         fi
 fi
 
-Cmps="$cmpsInitials"%20"${Date}"%20"${Time}${AP}"%20"${Day}${Extension}"
+prefix="${cmpsInit}"%20"${Date}"%20"${Time}${AP}"%20"${Day}${Extension}"
 
-if [[ $BeforeGeneralName -gt $FullTime ]] && [[ $FullTime -le $GeneralName ]];
+if [[ $BeforeGeneralName -gt $FullTime ]]
+    then echo "Before 3am"
+    elif [[ $FullTime -le $GeneralName ]]
     then
-        Cmps="$cmpsInitials"%20"${Date}"%20"${Day}"
+        prefix="${cmpsInit}"%20"${Date}"%20"${Day}"
 fi
 
 echo ""
@@ -107,7 +119,7 @@ echo "Current timestamp is: $Date $Time$AP $Day"
 echo ""
 sleep 1s
 
-curl "http://$cmpsIP/config?action=set&paramid=eParamID_FilenamePrefix&value=$Cmps"
+curl "http://$cmpsIP/config?action=set&paramid=eParamID_FilenamePrefix&value=$prefix"
 sleep 1s
 
 echo ""
