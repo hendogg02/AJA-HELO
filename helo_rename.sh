@@ -51,7 +51,7 @@ HighSchool="190100"
 
 if [[ $Day == "Sun" ]]
     then 
-        if [[ $BeforeFirstService -gt $FullTime ]] && [[ $FullTime -le $FirstService ]]
+        if [[ $BeforeFirstService -gt $FullTime ]] && [[ $FullTime -le $FirstService ]];
             then 
                 Time="9"
                 Extension=%20"-"%20"(Service"%20"Review)"
@@ -60,7 +60,7 @@ fi
 
 if [[ $Day == "Sun" ]]
     then
-         if [[ $BeforeSecondService -gt $FullTime ]] && [[ $FullTime -le $SecondService ]]
+         if [[ $BeforeSecondService -gt $FullTime ]] && [[ $FullTime -le $SecondService ]];
             then
                 Time="11"
                 Extension=%20"-"%20"(Service"%20"Review)"
@@ -69,7 +69,7 @@ fi
 
 if [[ $Day == "Sun" ]]
     then
-         if [[ $BeforeThirdService -gt $FullTime ]] && [[ $FullTime -le $ThirdService ]]
+         if [[ $BeforeThirdService -gt $FullTime ]] && [[ $FullTime -le $ThirdService ]];
             then
                 Time="1"
                 Extension=%20"-"%20"(Service"%20"Review)"
@@ -78,7 +78,7 @@ fi
 
 if [[ $Day == "Sun" ]]
     then
-         if [[ $BeforeMiddleSchool -gt $FullTime ]] && [[ $FullTime -le $MiddleSchool ]]
+         if [[ $BeforeMiddleSchool -gt $FullTime ]] && [[ $FullTime -le $MiddleSchool ]];
             then
                 Time="4"
                 Extension=%20"-"%20"(MiddleSchool)"
@@ -87,7 +87,7 @@ fi
 
 if [[ $Day == "Wed" ]]
     then
-         if [[ $BeforeHighSchool -gt $FullTime ]] && [[ $FullTime -le $HighSchool ]]
+         if [[ $BeforeHighSchool -gt $FullTime ]] && [[ $FullTime -le $HighSchool ]];
             then
                 Time="7"
                 Extension=%20"-"%20"(HighSchool)"
@@ -96,7 +96,7 @@ fi
 
 Cmps="$cmpsInitials"%20"${Date}"%20"${Time}${AP}"%20"${Day}${Extension}"
 
-if [[ $BeforeGeneralName -gt $FullTime ]] && [[ $FullTime -le $GeneralName ]]
+if [[ $BeforeGeneralName -gt $FullTime ]] && [[ $FullTime -le $GeneralName ]];
     then
         Cmps="$cmpsInitials"%20"${Date}"%20"${Day}"
 fi
