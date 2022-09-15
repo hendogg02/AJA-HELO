@@ -3,7 +3,7 @@
 # Custom variables
 # Campus naming and IP
 cmpsInit="ZZ"
-cmpsIP="10.0.0.1"
+heloIP="10.0.0.1"
 
 # To change the time hhmmss are all ran together. This is military time. If it is 8 o'clock do not write 08 but rather just 8. 
 # Add one minute to the record time to give buffer for seconds past.
@@ -130,7 +130,7 @@ echo ""
 sleep 1s
 
 # Command sent to AJA Helo.
-curl "http://$cmpsIP/config?action=set&paramid=eParamID_FilenamePrefix&value=$prefix"
+curl "http://$heloIP/config?action=set&paramid=eParamID_FilenamePrefix&value=$prefix"
 sleep 1s
 
 echo ""
