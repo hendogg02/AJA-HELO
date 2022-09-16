@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source cmps_info.sh
+source config_me.sh
 
 # Put in quotes campus initials that matches with the folder in Synology
 
