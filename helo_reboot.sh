@@ -5,7 +5,7 @@
 # TO ADD A NEW CAMPUS, ENSURE THAT INFORMATION IS ADDED TO ALL THREE ARRAYS, OR THIS WILL NOT WORK. 
 ################################
 
-source cmps_Helo.sh
+source cmps_info.sh
 
 echo "Rebooting $cmpsInit at IP address $heloIP..."
 curl 'http://'$heloIP'/config?action=set&paramid=eParamID_Reboot&value=1'
