@@ -1,6 +1,8 @@
 #!/bin/bash
 
-source config_me.sh
+dir=$(pwd)
+
+source ${dir}/config_me.sh
 
 # Put in quotes campus initials that matches with the folder in Synology
 

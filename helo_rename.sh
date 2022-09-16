@@ -1,6 +1,8 @@
 #!/bin/bash
 
-source config_me.sh
+dir=$(pwd)
+
+source ${dir}/config_me.sh
 
 # To change the time, hhmmss are all ran together. This is military time. 
 # If it is 8 o'clock do not write 08 but rather just 8. 

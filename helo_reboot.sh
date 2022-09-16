@@ -1,11 +1,8 @@
 #!/bin/bash
 
-################################
-# THIS SCRIPT REBOOTS HELO'S ACROSS ALL CAMPUSES LISTED BELOW. 
-# TO ADD A NEW CAMPUS, ENSURE THAT INFORMATION IS ADDED TO ALL THREE ARRAYS, OR THIS WILL NOT WORK. 
-################################
+dir=$(pwd)
 
-source config_me.sh
+source ${dir}/config_me.sh
 
 echo "Rebooting $cmpsInit at IP address $heloIP..."
 curl 'http://'$heloIP'/config?action=set&paramid=eParamID_Reboot&value=1'
