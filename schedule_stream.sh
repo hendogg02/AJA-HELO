@@ -1,4 +1,4 @@
- #!/bin/bash
+#!/bin/bash
 
 ################################
 # THIS SCRIPT SETS THE SCHEDULER TO RECORD ONLY
@@ -9,5 +9,5 @@
 
 source config_me.sh
 
-curl "http://'$heloIP'/config?action=set&paramid=eParamID_SchedulerActivity&value=2"
+curl "http://$heloIP/config?action=set&paramid=eParamID_SchedulerActivity&value=2"
 echo "$cmpsInit Helo scheduler has been set to stream only."
