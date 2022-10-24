@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Campus Initials.
 cmpsInit="ZZ"
