@@ -25,7 +25,7 @@ MiddleSchoolName="Middle School"
 
 BeforeHighSchool="184500"
 HighSchool="190100"
-HighSchoolName="High School"
+HighSchoolName="S12"
 
 #--------------------------------------------
 
